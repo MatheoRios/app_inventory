@@ -1,25 +1,25 @@
 
 from django.contrib import admin
-from .models import cities,countries,departaments,inventory,mstr_catalog,mstr_color,mstr_models,mstr_sizes,mstr_subcatalog,orders,products,sales,states,suppliers,warehouse,warehouse_location
+from .models import cities,countries,departmentsdb,inventorydb,mstr_catalog,mstr_color,mstr_model,mstr_size,mstr_subcatalog,ordersdb,productsdb,salesdb,states,suppliersdb,warehousedb,wh_locationsdb
 
 
 # Register your models here
 admin.site.register(cities)
 admin.site.register(countries)
-admin.site.register(departaments)
-admin.site.register(inventory)
+admin.site.register(departmentsdb)
+admin.site.register(inventorydb)
 admin.site.register(mstr_catalog)
 admin.site.register(mstr_color)
-admin.site.register(mstr_models)
-admin.site.register(mstr_sizes)
+admin.site.register(mstr_model)
+admin.site.register(mstr_size)
 admin.site.register(mstr_subcatalog)
-admin.site.register(orders)
-admin.site.register(products)
-admin.site.register(sales)
+admin.site.register(ordersdb)
+admin.site.register(productsdb)
+admin.site.register(salesdb)
 admin.site.register(states)
-admin.site.register(suppliers)
-admin.site.register(warehouse)
-admin.site.register(warehouse_location)
+admin.site.register(suppliersdb)
+admin.site.register(warehousedb)
+admin.site.register(wh_locationsdb)
 # Register your models here
 
 

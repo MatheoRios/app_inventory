@@ -2,7 +2,9 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.http import HttpResponseServerError
 from django.template import loader
-from app_inventory.models import mstr_catalog
+from app_inventory.database_operations import query_all 
+from app_inventory.models import states
+
 
 
 
@@ -12,14 +14,13 @@ def index(request):
     return HttpResponse(template.render())
 
 
-
-
-from django.shortcuts import render
-
-def vw_catalogos(request):
+def vw_states(request):
     try:
-        inv_catalago = mstr_catalog.objects.all().values()
-        context = {'mymembers': inv_catalago}
+        state = query_all(states)
+        context = {'state': state}
+        print(context)
         return render(request, 'index.html', context)
     except Exception as e:
         return HttpResponseServerError(f"An error occurred: {str(e)}")
+    
+    
